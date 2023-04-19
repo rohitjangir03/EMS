@@ -1,0 +1,38 @@
+Design Phase:
+List of Business entities:
+ 
+employees:	
+         	empno,firstname,lastname,email,mobileno,address,salary,hiredate,managerid,deptno
+ 
+department: 	
+          	deptno,deptname,location
+ 
+project:
+          	projectid,projectname,startdate,enddate
+ 
+project_employee:
+          	projectid,empno,join_date
+ 
+ 
+ 
+Business Operations to be automated by Online shopping application
+get employee details
+Update employee personal information
+change password
+forgot password
+resister employee
+Login
+Logout
+Remove employee
+Approve leave
+ 
+ 
+ 
+CRUD Operations:
+C:Create
+R:Read
+U:Update
+D:Delete
+ 
+ 
+

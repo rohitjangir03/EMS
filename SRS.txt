@@ -1,0 +1,86 @@
+Employee Management System
+
+Objective :
+Employee Management System is developed to maintain details of employees in an organization.
+This will help the organization to set their future goals and manage their resources efficiently.
+
+Scope:
+Authority will have access to employees data. It will help the organization to keep a track of all the employees they have / had till date. This system will help the organization to process the payroll of every employee
+
+
+Definition:
+HR-Human Resource
+Requirements:
+
+Functional Requirements:
+
+Employee will be able to view their professional details. 
+Only HR Representative will have the authority to transfer the employees  or manager from their respective departments. 
+HR Staff  can monitor the details of all the managers as well as employees of their respective departments.
+HR Staff should be restricted to view the project related details .
+ Respective Managers of their project can view the details of the employees working under his/her project.
+Employees should be restricted to view other employee details who belongs to other department.
+Employees can view only name, empid, contact number, email-id of  other employees belongs to same department
+Employee can login through using employeeId, mobile no ,email id for successful authentication.
+ 
+Management can see history of employees who have left the organisation.
+
+ Accounts department will have the details of all the emp from the salary purpose.
+ 
+sales department identifies sales goals and objectives and prepares a sales plan . Will develop the and implement the strategies to promote brand awareness. 
+
+development team will develop the application and will design the website as per 
+requirement  for the clients. (clients can be outsourced or app can be used for a particular purpose) 
+
+admin department will have the details of the all the employees for all the levels. Administration dept will make rules and regulations for each department. this department will make ensure for the discipline and decorum of the organization. will look into the work culture . will help the organization to handle the work load for different departments ,will help the organization to allocate the budget  to reach the goals with more profitability. 
+
+Support staff will help in maintaining the infrastructure and beauty of the organization. Cleaners ,sweepers ,carpenters, security other supporting staff will be included
+	
+
+Non - Functional Requirement:
+
+Security:
+Only Higher Management/Hr will able see all employee records.
+One employee should not be able to modify other employee details.
+Employee will be able to modify their own personal details.	
+Each employee will be to access the system  through his username and password process. 
+System will provide access to  the content , operations using Role based security (Authorization) (Permissions based on Role)
+
+
+Reliability:
+The system will backup employees data on regular basis and recover in short time duration to keep system operational, continuous updates are maintained, continuous Administration is done to keep system operational.
+
+
+Availability:
+	uptime:   24* 7  available
+		 99.999%
+
+Maintainability:
+	A Commercial database software will be used to maintain System data Persistence.
+		A readymade Web Server will be installed to host employee management portal (Web Site) to management server capabilities.
+		IT operations team will easily monitor and configure System using Administrative tools provided by Servers.
+		Separate environment will be maintained for system for isolation in  production, testing, and development.
+
+Portability:
+ PDA: Portable Device Application
+ System will provide portable User Interface ( HTML, CSS, JS) through  users will be able to access the Employee Management System portal.
+ System can be deployed to server to any OS, Cloud (Azure or AWS or GCP)
+
+Accessibility:
+Only EMS Employees will be able to access  the portal after authentication.
+HR Representatives will be able to view daily, weekly, monthly, annual data through customized dashboard.
+Durability:
+System will retain employee for 3 mins after login , if employee is inactive for the given timeframe  then user will redirected to login page.
+System will implement backup and recovery for retaining data of the employees.
+
+
+Modularity: 
+System will designed and developed using reusable, independent or dependent on scenarios in the form of modules. These modules will be loosely coupled and highly cohesive. System will contain all the  Details of Employee.    
+ 
+Scalability: 
+System assesses the highest workloads under which the system will still meet the performance requirements. There are two ways to enable your system scale as the workloads get higher: horizontal and vertical scaling. Horizontal scaling is provided by adding more machines to the pool of servers. Vertical scaling is achieved by adding more CPU and RAM to the existing machines. 
+
+Safety: 
+Employee Management System portal will be secure from malicious attack, fishing. Employee Management System  functionalities are protected from outside with proper firewall configuration. Employee Management System  will be always kept updated with latest anti virus software. Employee data will be backed up periodically to ensure safety of data using incremental back up strategy. Role based security will be applied for Application data and operations accessibility.
+
+
