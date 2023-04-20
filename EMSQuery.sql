@@ -16,84 +16,76 @@ create table Project(Proj_Id int primary key, Proj_Name Varchar(20), Proj_Desc v
 Create table Emp_Proj(Emp_No int references Employee(Emp_No),Proj_Id int references Project(Proj_Id),
 ProjJoin_Date Date, ProjLeave_Date Date );
 
+delimiter //
+
+create procedure insrt_emp_details(vfname varchar(20),
+vlname varchar(20),Vmail varchar(20),Vmno bigint(10),vaddress
+varchar(25),vsal double(9,2),vhiredate date,vmid int,vdeptno int)
+Begin
 Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Akash","Singh","akash.singh@emp.com",6785566403,
+Hire_Date,Manager_Id,Dept_No) values(vfname,vlname,Vmail,Vmno,vaddress,vsal,vhiredate,vmid,vdeptno);
+End //
+
+delimiter ;
+
+call insrt_emp_details("Akash","Singh","akash.singh@emp.com",6785566403,
 "Wadgaon Sheri,Pune",80000.00,'2000-04-08',104,1001);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Rohan","kumar","rohan.kumar@emp.com",9785566407,
+call insrt_emp_details("Rohan","kumar","rohan.kumar@emp.com",9785566407,
 "Hinjewadi,Pune",60000.00,'2000-08-20',105,1002);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Suraj","kumar","suraj.kumar@emp.com",6385566498,
+call insrt_emp_details("Suraj","kumar","suraj.kumar@emp.com",6385566498,
 "Baner,Pune",80000.00,'2000-07-22',106,1003);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Anand","Singh","anand.singh@emp.com",9985576403,
+call insrt_emp_details("Anand","Singh","anand.singh@emp.com",9985576403,
 "Hinjewadi,Pune",60000.00,'2001-11-17',107,1004);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Aashish","Raj","aashish.raj@emp.com",6300566905,
+call insrt_emp_details("Aashish","Raj","aashish.raj@emp.com",6300566905,
 "Baner,Pune",60000.00,'2001-05-08',104,1001);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Tanya","Sinha","tanya.sinha@emp.com",8340066709,
+call insrt_emp_details("Tanya","Sinha","tanya.sinha@emp.com",8340066709,
 "Wakad,Pune",70000.00,'2002-08-05',105,1003);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Kirti","Sinha","kirti.sinha@emp.com",9985566509,
+call insrt_emp_details("Kirti","Sinha","kirti.sinha@emp.com",9985566509,
 "Kharadi,Pune",70000.00,'2003-09-11',106,1002);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Krishna","kumar","krishna.@emp.com",8797566405,
+call insrt_emp_details("Krishna","kumar","krishna.@emp.com",8797566405,
 "FC Road,Pune",40000.00,'2004-06-15',105,1003);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Anish","Singh","anish.singh@emp.com",6785566902,
+call insrt_emp_details("Anish","Singh","anish.singh@emp.com",6785566902,
 "Baner,Pune",60000.00,'2002-09-17',104,1004);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Aman","Kumar","aman.kumar@emp.com",9345566709,
+call insrt_emp_details("Aman","Kumar","aman.kumar@emp.com",9345566709,
 "Akurdi,Pune",50000.00,'2001-04-22',107,1002);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Rohit","jangir","rohit.jangir@emp.com",6785567403,
+call insrt_emp_details("Rohit","jangir","rohit.jangir@emp.com",6785567403,
 "Pimprichwad,Pune",80000.00,'2002-07-19',106,1001);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Priyanka","sinha","priyanka.@emp.com",8785569409,
+call insrt_emp_details("Priyanka","sinha","priyanka.@emp.com",8785569409,
 "Kalyani,Pune",60000.00,'2005-11-26',104,1003);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Honey","kumari","honey.kumari@emp.com",9785576605,
+call insrt_emp_details("Honey","kumari","honey.kumari@emp.com",9785576605,
 "Lohgaon,Pune",40000.00,'2004-07-22',107,1005);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Rohan","singh","rohan.singh@emp.com",9785566403,
+call insrt_emp_details("Rohan","singh","rohan.singh@emp.com",9785566403,
 "Hinjewadi,Pune",60000.00,'2002-08-20',105,1002);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Mohan","Agarwal","mohan.wal@emp.com",9948856703,
+call insrt_emp_details("Mohan","Agarwal","mohan.wal@emp.com",9948856703,
 "Viman Nagar,Pune",30000.00,'2001-02-26',104,1004);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Sharad","khatri","sharad.@emp.com",6869862909,
+call insrt_emp_details("Sharad","khatri","sharad.@emp.com",6869862909,
 "Keshav Nagar,Pune",50000.00,'2002-03-25',106,1003);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Mohit","talwar","mohit.talwar@emp.com",9787566477,
+call insrt_emp_details("Mohit","talwar","mohit.talwar@emp.com",9787566477,
 "Satara,Pune",60000.00,'2005-02-11',105,1004);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Priya","Dubey","priya.dubey@emp.com",9645569503,
+call insrt_emp_details("Priya","Dubey","priya.dubey@emp.com",9645569503,
 "Hinjewadi,Pune",70000.00,'2000-11-19',102,1002);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Ravi","Gupta","ravi.gupta@emp.com",8345566433,
+call insrt_emp_details("Ravi","Gupta","ravi.gupta@emp.com",8345566433,
 "Lohgaon,Pune",40000.00,'2003-05-10',105,1001);
 
-Insert into Employee(FirstName,LastName,Email,Mobile_No,Address,Salary,
-Hire_Date,Manager_Id,Dept_No) values("Animesh","Aman","animesh.aman@emp.com",9987743122,
+call insrt_emp_details("Animesh","Aman","animesh.aman@emp.com",9987743122,
 "Kalyani,Pune",60000.00,'2005-07-14',106,1002);
 
 
